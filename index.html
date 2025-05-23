@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>curriculo de Matheus</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#formacao">Formação</a>
+    </nav>
+
+    <div style="text-align: center; margin: 20px;">
+        <button onclick="alternarTema()" id="botao-tema">
+            🌙 Modo Escuro
+        </button>
+    </div>
+
+    <h1>Matheus - Programador</h1>
+
+    <img src="./d905ba3e-9123-46e0-80e1-7dcd9ae66b8f.jpeg" alt="Minha foto" width="200">
+
+    <h2 id="sobre">Resumo profissional:</h2>
+    <p>Sou Programador a 1 ano, sei Html basico e css mas tenho problema com JavaScript,
+        mas é só coninuar estudando.
+    </p>
+
+    <h2 id="habilidades">Minhas Habilidades:</h2>
+
+    <div class="habilidade">
+        <p>HTML</p>
+        <div class="barra">
+            <div class="nivel html"></div>
+        </div>
+    </div>
+
+    <div class="habilidade">
+        <p>CSS</p>
+        <div class="barra">
+            <div class="nivel css"></div>
+        </div>
+    </div>
+
+    <div class="habilidade">
+        <p>JavaScript</p>
+        <div class="barra">
+            <div class="nivel js"></div>
+        </div>
+    </div>
+
+
+    <h2 id="formacao">Experiência / Formação</h2>
+    <table border="1">
+        <tr>
+            <th>Ano</th>
+            <th>Cargo/Curso</th>
+            <th>Instituição</th>
+        </tr>
+
+        <tr>
+            <td>2024</td>
+            <td>Curso de HTML</td>
+            <td>Curso em Vídeo</td>
+        </tr>
+
+        <tr>
+            <td>2024</td>
+            <td>Curso de CSS</td>
+            <td>Curso em Video</td>
+        </tr>
+    </table>
+
+    <a class="btn-download" href="seuarquivo.pdf" download><i class="fa fa-download"></i> Baixar Currículo (PDF)</a>
+
+    <h2 id="contato">Contato</h2>
+
+    <form action="mailto:seuemail@email.com" method="POST" enctype="text/plain">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="mensagem">Mensagem:</label><br>
+        <textarea id="mensagem" name="mensagem" rows="4" required></textarea><br><br>
+
+        <button type="submit"><i class="fa fa-paper-plane"></i> Enviar</button>
+    </form>
+
+    <div style="text-align: center; margin: 40px 0;">
+        <button onclick="mostrarOcultar()" id="botao-projetos">
+            👀 Ver mais sobre mim
+        </button>
+    </div>
+
+    <div id="mais-info" class="mais-info">
+        <h2>Mais sobre mim</h2>
+        <p>Além de <strong>programar</strong>, também gosto de jogar videogame, jogar bola e aprender coisas novas todos
+            os dias!</p>
+        <p>Meu objetivo é me tornar um desenvolvedor <strong>fullstack</strong> e trabalhar em projetos que mudam vidas.</p>
+    </div>
+
+    <script>
+        function alternarTema() {
+            const body = document.body;
+            const botao = document.getElementById('botao-tema');
+
+            body.classList.toggle('tema-escuro');
+
+            if (body.classList.contains('tema-escuro')) {
+                botao.textContent = '☀️ Modo Claro';
+            } else {
+                botao.textContent = '🌙 Modo Escuro';
+            }
+        }
+
+        function mostrarOcultar() {
+            const secao = document.getElementById("mais-info");
+            const botao = document.getElementById("botao-projetos");
+
+            secao.classList.toggle("visivel");
+
+            if (secao.classList.contains("visivel")) {
+                botao.textContent = "🔽 Ver menos";
+            } else {
+                botao.textContent = "👀 Ver mais sobre mim";
+            }
+        }
+
+    </script>
+
+    <div style="text-align: center; margin: 40px 0;">
+        <h2>Minhas redes sociais</h2>
+        <a href="https://github.com/loading331?tab=overview&from=2025-04-01&to=2025-04-30" target="_blank"
+            style="margin: 0 10px;">
+            <i class="fab fa-github fa-2x"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/loading-g4mer-738904349" target="_blank" style="margin: 0 10px;">
+            <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a href="https://www.instagram.com/matheus_artista2" target="_blank" style="margin: 0 10px;">
+            <i class="fab fa-instagram fa-2x"></i>
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Matheus - Todos os direitos reservados.</p>
+        <p>
+            <a href="https://github.com/loading331?tab=overview&from=2025-04-01&to=2025-04-30" target="_blank"><i
+                    class="fab fa-github"></i> GitHub</a> |
+            <a href="https://www.linkedin.com/in/loading-g4mer-738904349" target="_blank"><i
+                    class="fab fa-linkedin"></i> LinkedIn</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>
